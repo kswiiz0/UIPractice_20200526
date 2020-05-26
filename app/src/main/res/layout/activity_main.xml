@@ -5,54 +5,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#888888"
+    android:padding="15dp"
+
+    >
+    <!--
+    백그라운드 이미지나 색상을 지정할수 있다.
+    android:background="#888888"
+
+    화면기준 어디를 기준으로 정렬을 할것인지를 지정한다.
+    android:gravity="right|bottom"
+
+
+
+
+    -->
 
     <!-- drawable 디렉토리는 이미지와 같은 item들이 위치한다.
         src : 이미지파일의 위치
         scaleType : 이미지를 붙이는 방법을 지정한다. 채우기, 원본, 늘리기 같은 것.
                     centerCrop을 가장많이 사용한다.
     -->
-    <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/logo_main_01"
-
-        />
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo_main_01"
+            />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="아이디"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:hint="이메일 양식으로 입력"
         android:inputType="textEmailAddress"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="비밀번호" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:hint="비밀번호 입력"
         android:inputType="textPassword" />
 
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:text="자동 로그인"
         android:checked="true"
+        android:enabled="false"
         />
+    <!--
+    android:enabled="false"
+    화면은 보여주되 기능을 막을때 사용
+    -->
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
         >
         <RadioButton
             android:layout_width="wrap_content"
@@ -73,10 +107,30 @@
 
     </RadioGroup>
 
-    <Button
+<!--
+크기를 몇대몇으로 나눠가질지 지정한다.
+android:layout_width="0dp"
+android:layout_weight="1"
+-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="로그인"
-        />
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="로그인"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="회원가입"
+            />
+    </LinearLayout>
 
 </LinearLayout>
