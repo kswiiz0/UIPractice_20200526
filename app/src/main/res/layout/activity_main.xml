@@ -7,6 +7,19 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- drawable 디렉토리는 이미지와 같은 item들이 위치한다.
+        src : 이미지파일의 위치
+        scaleType : 이미지를 붙이는 방법을 지정한다. 채우기, 원본, 늘리기 같은 것.
+                    centerCrop을 가장많이 사용한다.
+    -->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo_main_01"
+
+        />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
